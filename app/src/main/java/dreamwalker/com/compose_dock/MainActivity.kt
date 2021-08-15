@@ -30,6 +30,8 @@ fun Greeting(name: String) {
     Column() {
         Text(text = "Hello $name!")
         Text(text = "Hello $name!")
+        Text(text = "Hello $name!")
+        Text(text = "Hello $name!")
     }
 
 }
