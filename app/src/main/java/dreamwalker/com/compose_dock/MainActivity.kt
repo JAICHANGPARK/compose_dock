@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeDockTheme {
                 // A surface container using the 'background' color from the theme
-                CounterApp()
+                MyApp()
             }
         }
     }
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        Greeting("Android")
+        CounterApp()
     }
 }
 
