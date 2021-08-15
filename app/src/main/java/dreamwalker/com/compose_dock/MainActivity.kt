@@ -9,19 +9,26 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import dreamwalker.com.compose_dock.ui.theme.Compose_dockTheme
+import dreamwalker.com.compose_dock.counter.CounterApp
+import dreamwalker.com.compose_dock.ui.theme.ComposeDockTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Compose_dockTheme {
+            ComposeDockTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                CounterApp()
             }
         }
+    }
+}
+
+
+@Composable
+fun MyApp() {
+    Surface(color = MaterialTheme.colors.background) {
+        Greeting("Android")
     }
 }
 
@@ -39,7 +46,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    Compose_dockTheme {
+    ComposeDockTheme {
         Greeting("Android")
     }
 }
